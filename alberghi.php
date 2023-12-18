@@ -58,7 +58,7 @@
         }
         echo "<br>";
         echo "Distanza dal centro: ";
-        echo $albergo["distance_to_center"];
+        echo $albergo["distance_to_center"] . " km";
         echo "<br><br>";
 }
 ?>
