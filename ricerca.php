@@ -9,6 +9,12 @@
     <form action="alberghi.php">
         <label for="vote">Cerca per valutazione:</label>
         <input type="number" id="vote" name="vote" min="1" max="5" />
+   
+        <!-- <label for="parking">Cerca per disponibilità di parcheggio:</label>
+        <select name="parking" id="parking">
+        <option value="true">Si</option>
+        <option value="false">No</option>
+        </select> -->
         <button type="submit">Cerca</button>
     </form>
 </body>

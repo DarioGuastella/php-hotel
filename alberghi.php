@@ -81,6 +81,7 @@ $voto = $_GET["vote"] ?? "Nessun voto";
             echo "<td>No</td>";
         };
         echo "<td>".$albergo['distance_to_center']." km</td>";
+        echo "</tr>";
     
     }
     if ($voto=="") {
@@ -95,6 +96,7 @@ $voto = $_GET["vote"] ?? "Nessun voto";
             echo "<td>No</td>";
         };
         echo "<td>".$albergo['distance_to_center']." km</td>";
+        echo "</tr>";
     }
 }
     ?>
