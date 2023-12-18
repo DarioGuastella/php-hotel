@@ -48,32 +48,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PHP Hotels</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
-<body>
-    <?php
-        foreach ($hotels as $albergo){
-            echo "Nome struttura: ";
-            echo $albergo["name"];
-            echo "<br>";
-            echo "Descrizione: ";
-            echo $albergo["description"];
-            echo "<br>";
-            echo "Valutazione: ";
-            echo $albergo["vote"];
-            echo "<br>";
-            echo "Disponibilità di parcheggio: ";
-            if ($albergo["parking"]==true) {
-                echo "Si";
-            } else {
-                echo "No";
-            }
-            echo "<br>";
-            echo "Distanza dal centro: ";
-            echo $albergo["distance_to_center"] . " km";
-            echo "<br><br>";
-    }
+<body class=" bg-dark">
+    
+    <main class="container mt-5">
+    <table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Nome Struttura:</th>
+      <th scope="col">Descrizione:</th>
+      <th scope="col">Valutazione:</th>
+      <th scope="col">Disponibilità di parcheggio:</th>
+      <th scope="col">Distanza dal centro:</th>
+    </tr>
+  </thead>
+  <tbody>
+  <?php
+  foreach ($hotels as $albergo){
+    echo "<tr>";
+    echo "<td>".$albergo['name']."</td>";
+    echo "<td>".$albergo['description']."</td>";
+    echo "<td>".$albergo['vote']."</td>";
+    if ($albergo["parking"]==true) {
+        echo "<td>Si</td>";
+    } else {
+        echo "<td>No</td>";
+    };
+    echo "<td>".$albergo['distance_to_center']." km</td>";
+}
     ?>
+  </tbody>
+</table>
+    </main>
 </body>
 </html>
 
+<!-- <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr> -->
