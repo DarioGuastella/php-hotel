@@ -1,3 +1,6 @@
+<?php
+$voto = $_GET["vote"] ?? "Nessun voto";
+?>
 <!-- Lista Alberghi -->
 <?php
 
@@ -66,26 +69,38 @@
   <tbody>
   <?php
   foreach ($hotels as $albergo){
-    echo "<tr>";
-    echo "<td>".$albergo['name']."</td>";
-    echo "<td>".$albergo['description']."</td>";
-    echo "<td>".$albergo['vote']."</td>";
-    if ($albergo["parking"]==true) {
-        echo "<td>Si</td>";
-    } else {
-        echo "<td>No</td>";
-    };
-    echo "<td>".$albergo['distance_to_center']." km</td>";
+    if ($albergo['vote']<=$voto) {
+    
+        echo "<tr>";
+        echo "<td>".$albergo['name']."</td>";
+        echo "<td>".$albergo['description']."</td>";
+        echo "<td>".$albergo['vote']."</td>";
+        if ($albergo["parking"]==true) {
+            echo "<td>Si</td>";
+        } else {
+            echo "<td>No</td>";
+        };
+        echo "<td>".$albergo['distance_to_center']." km</td>";
+    
+    }
+    if ($voto=="") {
+        
+        echo "<tr>";
+        echo "<td>".$albergo['name']."</td>";
+        echo "<td>".$albergo['description']."</td>";
+        echo "<td>".$albergo['vote']."</td>";
+        if ($albergo["parking"]==true) {
+            echo "<td>Si</td>";
+        } else {
+            echo "<td>No</td>";
+        };
+        echo "<td>".$albergo['distance_to_center']." km</td>";
+    }
 }
     ?>
   </tbody>
 </table>
+<a href="ricerca.php">Torna alla pagina di ricerca</a>
     </main>
 </body>
 </html>
-
-<!-- <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr> -->
