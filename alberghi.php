@@ -1,3 +1,4 @@
+<!-- Lista Alberghi -->
 <?php
 
     $hotels = [
@@ -39,6 +40,10 @@
         ],
 
     ];
-
+    foreach ($hotels as $albergo){
+        echo '<pre>';
+        print_r($albergo);
+        echo  '</pre>';
+}
 ?>
 
