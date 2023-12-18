@@ -40,26 +40,40 @@
         ],
 
     ];
-    foreach ($hotels as $albergo){
-        echo "Nome struttura: ";
-        echo $albergo["name"];
-        echo "<br>";
-        echo "Descrizione: ";
-        echo $albergo["description"];
-        echo "<br>";
-        echo "Valutazione: ";
-        echo $albergo["vote"];
-        echo "<br>";
-        echo "Disponibilità di parcheggio: ";
-        if ($albergo["parking"]==true) {
-            echo "Si";
-        } else {
-            echo "No";
-        }
-        echo "<br>";
-        echo "Distanza dal centro: ";
-        echo $albergo["distance_to_center"] . " km";
-        echo "<br><br>";
-}
+
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHP Hotels</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js" integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <?php
+        foreach ($hotels as $albergo){
+            echo "Nome struttura: ";
+            echo $albergo["name"];
+            echo "<br>";
+            echo "Descrizione: ";
+            echo $albergo["description"];
+            echo "<br>";
+            echo "Valutazione: ";
+            echo $albergo["vote"];
+            echo "<br>";
+            echo "Disponibilità di parcheggio: ";
+            if ($albergo["parking"]==true) {
+                echo "Si";
+            } else {
+                echo "No";
+            }
+            echo "<br>";
+            echo "Distanza dal centro: ";
+            echo $albergo["distance_to_center"] . " km";
+            echo "<br><br>";
+    }
+    ?>
+</body>
+</html>
 
