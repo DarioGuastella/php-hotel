@@ -41,9 +41,25 @@
 
     ];
     foreach ($hotels as $albergo){
-        echo '<pre>';
-        print_r($albergo);
-        echo  '</pre>';
+        echo "Nome struttura: ";
+        echo $albergo["name"];
+        echo "<br>";
+        echo "Descrizione: ";
+        echo $albergo["description"];
+        echo "<br>";
+        echo "Valutazione: ";
+        echo $albergo["vote"];
+        echo "<br>";
+        echo "Disponibilità di parcheggio: ";
+        if ($albergo["parking"]==true) {
+            echo "Si";
+        } else {
+            echo "No";
+        }
+        echo "<br>";
+        echo "Distanza dal centro: ";
+        echo $albergo["distance_to_center"];
+        echo "<br><br>";
 }
 ?>
 
